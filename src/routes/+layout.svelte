@@ -15,6 +15,7 @@
 </svelte:head>
 
 {@render children()}
+<Footer></Footer>
 
 <div style="display:none">
 	{#each locales as locale (locale)}
