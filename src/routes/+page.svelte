@@ -12,12 +12,11 @@
 
 <Background src={backgroundImg}></Background>
 
-<Card class="h-40 bg-primary">
-	<enhanced:img src="#lib/assets/avatar.jpg" class="h-full w-full"></enhanced:img>
-	<div>
-		<h1>Rêves</h1>
-		<p>{m["index.description"]()}</p>
-	</div>
+<Card title="Rêves" class="min-h-40 bg-primary">
+	{#snippet left()}
+		<enhanced:img src="#lib/assets/avatar.jpg" class="h-full w-full"></enhanced:img>
+	{/snippet}
+	<p>{m["index.description"]()}</p>
 </Card>
 
 {#snippet Section(
@@ -25,20 +24,21 @@
 	href: Parameters<typeof resolve>[0],
 	[bottomImg, topImg]: [string, string]
 )}
-	<Card {href} class="group bg-secondary">
-		<div class="flex grow flex-col">
-			<h1>{m[`index.${translationKey}`]()}</h1>
-			<p>{m[`index.${translationKey}.description`]()}</p>
-			<ArrowRightIcon class="h-8 w-8 grow"></ArrowRightIcon>
-		</div>
-		<ItemStack class="">
-			{#snippet top()}
-				<enhanced:img src={bottomImg} class="h-full w-full"></enhanced:img>
-			{/snippet}
-			{#snippet bottom()}
-				<enhanced:img src={topImg} class="h-full w-full"></enhanced:img>
-			{/snippet}
-		</ItemStack>
+	<Card title={m[`index.${translationKey}`]()} {href} class="group bg-secondary">
+		<p>{m[`index.${translationKey}.description`]()}</p>
+		{#snippet dock()}
+			<ArrowRightIcon class="-m-2 h-8 w-8 grow overflow-clip"></ArrowRightIcon>
+		{/snippet}
+		{#snippet right()}
+			<ItemStack class="">
+				{#snippet top()}
+					<enhanced:img src={bottomImg} class="h-full w-full"></enhanced:img>
+				{/snippet}
+				{#snippet bottom()}
+					<enhanced:img src={topImg} class="h-full w-full"></enhanced:img>
+				{/snippet}
+			</ItemStack>
+		{/snippet}
 	</Card>
 {/snippet}
 {@render Section("albums", "/", [bleachedCover, bleuCover])}

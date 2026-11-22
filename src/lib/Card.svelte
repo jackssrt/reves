@@ -7,14 +7,33 @@
 	let {
 		class: _klass,
 		href,
+		title,
+		left,
+		right,
+		dock,
 		children: _children,
-	}: { class: ClassValue; href?: Parameters<typeof resolve>[0]; children: Snippet } = $props();
+	}: {
+		class: ClassValue;
+		href?: Parameters<typeof resolve>[0];
+		title: string;
+		left?: Snippet;
+		right?: Snippet;
+		dock?: Snippet;
+		children: Snippet;
+	} = $props();
 	let klass = $derived(cn("flex w-full gap-2 p-2 shadow-lg", _klass));
 </script>
 
 {#snippet children()}
-	<!-- Extra stuff here -->
-	{@render _children()}
+	{@render left?.()}
+	<div class="flex grow flex-col">
+		<h1>{title}</h1>
+		{@render _children()}
+		<div class="mt-auto">
+			{@render dock?.()}
+		</div>
+	</div>
+	{@render right?.()}
 {/snippet}
 
 {#if typeof href !== "undefined"}
