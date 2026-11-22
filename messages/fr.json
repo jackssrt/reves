@@ -1,4 +1,10 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from fr!"
+	"index.description": "Nous sommes une organisation qui fait des concerts pour les artistes inconnu-e-s.",
+	"index.albums": "Albums",
+	"index.albums.description": "Voici nos albums",
+	"index.events": "Évènements",
+	"index.events.description": "Une liste de nos évènements, futur, present et passés.",
+	"index.merch": "Merch",
+	"index.merch.description": "Achète-toi un t-shirt cool !"
 }

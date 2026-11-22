@@ -39,5 +39,11 @@
 		"typescript": "^6.0.3",
 		"typescript-eslint": "^8.72.2",
 		"vite": "^8.3.8"
+	},
+	"dependencies": {
+		"@iconify-svelte/lucide": "^1.0.66",
+		"clsx": "^2.1.1",
+		"tailwind-merge": "^3.7.0",
+		"type-fest": "^6.0.3"
 	}
 }
