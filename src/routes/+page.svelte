@@ -12,9 +12,9 @@
 
 <Background src={backgroundImg}></Background>
 
-<Card title="Rêves" class="min-h-40 bg-primary">
+<Card title="Rêves" class=" bg-primary">
 	{#snippet left()}
-		<enhanced:img src="#lib/assets/avatar.jpg" class="h-full w-full"></enhanced:img>
+		<enhanced:img src="#lib/assets/avatar.jpg" class="h-auto w-full"></enhanced:img>
 	{/snippet}
 	<p>{m["index.description"]()}</p>
 </Card>
@@ -30,7 +30,7 @@
 			<ArrowRightIcon class="-m-2 h-8 w-8 grow overflow-clip"></ArrowRightIcon>
 		{/snippet}
 		{#snippet right()}
-			<ItemStack class="">
+			<ItemStack class="shrink-0">
 				{#snippet top()}
 					<enhanced:img src={bottomImg} class="h-full w-full"></enhanced:img>
 				{/snippet}
