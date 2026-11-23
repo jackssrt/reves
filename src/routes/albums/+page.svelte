@@ -1,20 +1,18 @@
 <script>
-	import Background from "#lib/Background.svelte";
 	import Button from "#lib/Button.svelte";
 	import Card from "#lib/Card.svelte";
-	import backgroundImg from "#lib/assets/bluebackground.jpg";
 	import { m } from "#lib/paraglide/messages.js";
 	import SpotifyIcon from "@iconify-svelte/mdi/spotify";
 	import AppleMusicIcon from "@iconify-svelte/cib/apple-music";
 </script>
 
-<Background src={backgroundImg}></Background>
 <Card title="Albums" titleType="big" class="bg-primary">{m["index.albums.description"]()}</Card>
 
 <Card title="Bleached" class="bg-secondary">
 	{m["albums.bleached.description"]()}
 	{#snippet right()}
-		<enhanced:img src="#lib/assets/typos/bleached-typo.png"></enhanced:img>
+		<!-- force max width -->
+		<enhanced:img src="#lib/assets/typos/bleached-typo.png?w=9999"></enhanced:img>
 		<enhanced:img src="#lib/assets/covers/bleached.png" class="h-full w-32"></enhanced:img>
 	{/snippet}
 	{#snippet dock()}
@@ -34,7 +32,8 @@
 <Card title="Le bleu a des yeux" class="bg-secondary">
 	{m["albums.lbady.description"]()}
 	{#snippet right()}
-		<enhanced:img class="ml-auto" src="#lib/assets/typos/lbady-typo.png"></enhanced:img>
+		<!-- force max width -->
+		<enhanced:img class="ml-auto" src="#lib/assets/typos/lbady-typo.png?w=9999"></enhanced:img>
 		<enhanced:img src="#lib/assets/covers/lbady.jpg" class="h-full w-32"></enhanced:img>
 	{/snippet}
 	{#snippet dock()}

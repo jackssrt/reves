@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Background from "#lib/Background.svelte";
 	import Card from "#lib/Card.svelte";
 	import { m } from "#lib/paraglide/messages.js";
 	import ItemStack from "./ItemStack.svelte";
@@ -15,8 +14,6 @@
 	import Button from "#lib/Button.svelte";
 	import { type Resolvable } from "#lib/utils.ts";
 </script>
-
-<Background src={backgroundImg}></Background>
 
 <Card title="Rêves" titleType="big" class="bg-primary">
 	{#snippet left()}
