@@ -15,7 +15,7 @@
 	}: {
 		class: ClassValue;
 		href?: Parameters<typeof resolve>[0];
-		title: string;
+		title?: string;
 		left?: Snippet;
 		right?: Snippet;
 		dock?: Snippet;
@@ -27,7 +27,9 @@
 {#snippet children()}
 	{@render left?.()}
 	<div class="flex grow flex-col">
-		<h1>{title}</h1>
+		{#if title}
+			<h1>{title}</h1>
+		{/if}
 		{@render _children()}
 		<div class="mt-auto">
 			{@render dock?.()}
