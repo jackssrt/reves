@@ -12,8 +12,8 @@
 	import InstagramIcon from "@iconify-svelte/mdi/instagram";
 	import YoutubeIcon from "@iconify-svelte/mdi/youtube";
 	import DiscordIcon from "@iconify-svelte/ic/baseline-discord";
-	import { resolve } from "$app/paths";
 	import Button from "#lib/Button.svelte";
+	import { type Resolvable } from "#lib/utils.ts";
 </script>
 
 <Background src={backgroundImg}></Background>
@@ -24,13 +24,13 @@
 	{/snippet}
 	<p>{m["index.description"]()}</p>
 	{#snippet dock()}
-		<Button href="https://www.instagram.com/reves.partys/" class="min-w-8">
+		<Button href="https://www.instagram.com/reves.partys/" class="h-12 min-w-8 p-0">
 			<InstagramIcon class="m-2 h-8 w-8"></InstagramIcon>
 		</Button>
-		<Button href="https://www.youtube.com/@RevesPartys" class="min-w-8">
+		<Button href="https://www.youtube.com/@RevesPartys" class="h-12 min-w-8 p-0">
 			<YoutubeIcon class="m-2 h-8 w-8"></YoutubeIcon>
 		</Button>
-		<Button href="https://discord.gg/yhqvPfkD9U" class="min-w-8">
+		<Button href="https://discord.gg/yhqvPfkD9U" class="h-12 min-w-8 p-0">
 			<DiscordIcon class="m-2 h-8 w-8"></DiscordIcon>
 		</Button>
 	{/snippet}
@@ -38,7 +38,7 @@
 
 {#snippet Section(
 	translationKey: "events" | "albums" | "merch",
-	href: Parameters<typeof resolve>[0],
+	href: Resolvable,
 	[bottomImg, topImg]: [string, string]
 )}
 	<Card title={m[`index.${translationKey}`]()} {href} class="group bg-secondary">
@@ -58,6 +58,6 @@
 		{/snippet}
 	</Card>
 {/snippet}
-{@render Section("events", "/", [bleachedCover, lbadyCover])}
-{@render Section("albums", "/", [bleachedCover, lbadyCover])}
-{@render Section("merch", "/", [bleachedTShirt, lbadyTShirt])}
+{@render Section("events", "/events", [bleachedCover, lbadyCover])}
+{@render Section("albums", "/albums", [bleachedCover, lbadyCover])}
+{@render Section("merch", "https://revesparty.bigcartel.com/", [bleachedTShirt, lbadyTShirt])}

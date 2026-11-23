@@ -41,6 +41,7 @@
 		"vite": "^8.3.8"
 	},
 	"dependencies": {
+		"@iconify-svelte/cib": "^1.0.2",
 		"@iconify-svelte/ic": "^1.0.3",
 		"@iconify-svelte/lucide": "^1.0.66",
 		"@iconify-svelte/mdi": "^1.0.2",

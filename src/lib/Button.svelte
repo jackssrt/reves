@@ -20,7 +20,7 @@
 	<a
 		href={resolve(href)}
 		class={cn(
-			"grid min-w-24 place-items-center bg-white text-primary shadow-xs transition-shadow hover:shadow",
+			"grid h-8 p-2 min-w-24 place-items-center bg-white text-primary shadow-xs transition-shadow hover:shadow",
 			{ "bg-transparent": kind === "secondary" },
 			klass
 		)}

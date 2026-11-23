@@ -1,8 +1,7 @@
 <script lang="ts">
 	import type { ClassValue } from "svelte/elements";
-	import { cn } from "./utils";
+	import { cn, type Resolvable, resolve } from "./utils";
 	import type { Snippet } from "svelte";
-	import { resolve } from "$app/paths";
 
 	let {
 		class: _klass,
@@ -14,8 +13,8 @@
 		children: _children,
 	}: {
 		class: ClassValue;
-		href?: Parameters<typeof resolve>[0];
-		title?: string;
+		href?: Resolvable;
+		title?: Snippet | string;
 		left?: Snippet;
 		right?: Snippet;
 		dock?: Snippet;
@@ -27,11 +26,13 @@
 {#snippet children()}
 	{@render left?.()}
 	<div class="flex grow flex-col">
-		{#if title}
+		{#if typeof title === "string"}
 			<h1 class="text-xl font-bold">{title}</h1>
+		{:else if typeof title !== "undefined"}
+			{@render title()}
 		{/if}
 		{@render _children()}
-		<div class="mt-auto flex">
+		<div class="mt-auto flex gap-1">
 			{@render dock?.()}
 		</div>
 	</div>

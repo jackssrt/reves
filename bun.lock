@@ -5,6 +5,7 @@
     "": {
       "name": "revesparty.org",
       "dependencies": {
+        "@iconify-svelte/cib": "^1.0.2",
         "@iconify-svelte/ic": "^1.0.3",
         "@iconify-svelte/lucide": "^1.0.66",
         "@iconify-svelte/mdi": "^1.0.2",
@@ -97,6 +98,8 @@
     "@humanwhocodes/module-importer": ["@humanwhocodes/module-importer@1.0.1", "", {}, "sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA=="],
 
     "@humanwhocodes/retry": ["@humanwhocodes/retry@0.4.3", "", {}, "sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ=="],
+
+    "@iconify-svelte/cib": ["@iconify-svelte/cib@1.0.2", "", { "dependencies": { "@iconify/css-svelte": "^1.0.0" } }, "sha512-MAW8NgY1XnHGb98V7hSrnRogmR1jPNjkvWA28F0DDnamZMfekMkjTrB9lnHBfU0CVLQdGrCKMKvGYjmf33XQ3g=="],
 
     "@iconify-svelte/ic": ["@iconify-svelte/ic@1.0.3", "", { "dependencies": { "@iconify/css-svelte": "^1.0.0" } }, "sha512-CPTdnFfTqcJryp+kSKbOaaxop//ZVCaRP2pVzd+LOFtqFKwmD9AWH711EX2Gy81AP2HHIagAyKM5SKdiHdDlJQ=="],
 
