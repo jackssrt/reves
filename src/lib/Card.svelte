@@ -1,12 +1,11 @@
 <script lang="ts">
-	import type { ClassValue } from "svelte/elements";
 	import { cn, type Resolvable, resolve } from "./utils";
 	import type { Snippet } from "svelte";
 
 	export type TitleType = "big" | "normal";
 
 	let {
-		class: _klass,
+		class: __klass,
 		titleType = "normal",
 		href,
 		title,
@@ -15,7 +14,7 @@
 		dock,
 		children: _children,
 	}: {
-		class: ClassValue;
+		class: string | { main: string; dock?: string };
 		titleType?: TitleType;
 		href?: Resolvable;
 		title?: Snippet | string;
@@ -24,7 +23,9 @@
 		dock?: Snippet;
 		children: Snippet;
 	} = $props();
-	let klass = $derived(cn("flex w-full gap-2 p-2 shadow-lg", _klass));
+	// i miss rust, name shadowing, pattern matching
+	let _klass = $derived(typeof __klass === "string" ? { main: __klass ?? "" } : __klass);
+	let klass = $derived(cn("flex w-full gap-2 p-2 shadow-lg", _klass.main));
 </script>
 
 {#snippet children()}
@@ -36,9 +37,11 @@
 			{@render title()}
 		{/if}
 		{@render _children()}
-		<div class="mt-auto flex gap-1">
-			{@render dock?.()}
-		</div>
+		{#if dock}
+			<div class={cn("relative mt-auto flex flex-col gap-1 md:static md:flex-row", _klass.dock)}>
+				{@render dock()}
+			</div>
+		{/if}
 	</div>
 	{@render right?.()}
 {/snippet}

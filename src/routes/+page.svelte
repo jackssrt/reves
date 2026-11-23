@@ -15,7 +15,7 @@
 	import { type Picture } from "@sveltejs/enhanced-img";
 </script>
 
-<Card title="Rêves" titleType="big" class="bg-primary">
+<Card title="Rêves" titleType="big" class={{ main: "bg-primary", dock: "flex-row" }}>
 	{#snippet left()}
 		<enhanced:img src="#lib/assets/avatar.jpg" class="h-auto w-full"></enhanced:img>
 	{/snippet}

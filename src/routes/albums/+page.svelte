@@ -12,8 +12,9 @@
 	{m["albums.bleached.description"]()}
 	{#snippet right()}
 		<!-- force max width -->
-		<enhanced:img src="#lib/assets/typos/bleached-typo.png?w=9999"></enhanced:img>
-		<enhanced:img src="#lib/assets/covers/bleached.png" class="h-full w-32"></enhanced:img>
+		<enhanced:img src="#lib/assets/typos/bleached-typo.png?w=9999" class="hidden md:block"
+		></enhanced:img>
+		<enhanced:img src="#lib/assets/covers/bleached.png" class="h-auto max-w-48"></enhanced:img>
 	{/snippet}
 	{#snippet dock()}
 		<Button
@@ -22,7 +23,7 @@
 			><SpotifyIcon class="-m-1 h-7 w-7"></SpotifyIcon>Spotify</Button
 		>
 		<Button
-			class="flex justify-center gap-2"
+			class="flex justify-center gap-2 text-nowrap"
 			href="https://music.apple.com/us/album/le-bleu-a-des-yeux/1681025871"
 			><AppleMusicIcon class="-m-1 h-8 w-8 p-1"></AppleMusicIcon>Apple Music</Button
 		>
@@ -33,8 +34,9 @@
 	{m["albums.lbady.description"]()}
 	{#snippet right()}
 		<!-- force max width -->
-		<enhanced:img class="ml-auto" src="#lib/assets/typos/lbady-typo.png?w=9999"></enhanced:img>
-		<enhanced:img src="#lib/assets/covers/lbady.jpg" class="h-full w-32"></enhanced:img>
+		<enhanced:img class="hidden md:block" src="#lib/assets/typos/lbady-typo.png?w=9999"
+		></enhanced:img>
+		<enhanced:img src="#lib/assets/covers/lbady.jpg" class="h-auto max-w-48"></enhanced:img>
 	{/snippet}
 	{#snippet dock()}
 		<Button
@@ -43,7 +45,7 @@
 			><SpotifyIcon class="-m-1 h-7 w-7"></SpotifyIcon>Spotify</Button
 		>
 		<Button
-			class="flex justify-center gap-2"
+			class="flex justify-center gap-2 text-nowrap"
 			href="https://music.apple.com/us/album/bleached/1883193253"
 			><AppleMusicIcon class="-m-1 h-8 w-8 p-1"></AppleMusicIcon>Apple Music</Button
 		>
