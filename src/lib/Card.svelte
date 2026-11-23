@@ -31,7 +31,7 @@
 			<h1>{title}</h1>
 		{/if}
 		{@render _children()}
-		<div class="mt-auto">
+		<div class="mt-auto flex">
 			{@render dock?.()}
 		</div>
 	</div>

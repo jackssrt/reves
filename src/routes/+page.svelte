@@ -41,7 +41,7 @@
 	<Card title={m[`index.${translationKey}`]()} {href} class="group bg-secondary">
 		<p>{m[`index.${translationKey}.description`]()}</p>
 		{#snippet dock()}
-			<ArrowRightIcon class="-m-2 h-8 w-8 grow overflow-clip"></ArrowRightIcon>
+			<ArrowRightIcon class="-m-2 h-8 w-8 overflow-clip"></ArrowRightIcon>
 		{/snippet}
 		{#snippet right()}
 			<ItemStack class="shrink-0">
