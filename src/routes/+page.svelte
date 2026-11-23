@@ -5,7 +5,9 @@
 	import ItemStack from "./ItemStack.svelte";
 	import backgroundImg from "#lib/assets/bluebackground.jpg";
 	import bleachedCover from "#lib/assets/covers/bleached.png";
-	import bleuCover from "#lib/assets/covers/le-bleu-a-des-yeux.jpg";
+	import lbadyCover from "#lib/assets/covers/lbady.jpg";
+	import bleachedTShirt from "#lib/assets/tshirts/bleached.png";
+	import lbadyTShirt from "#lib/assets/tshirts/lbady.png";
 	import ArrowRightIcon from "@iconify-svelte/lucide/arrow-right";
 	import InstagramIcon from "@iconify-svelte/mdi/instagram";
 	import YoutubeIcon from "@iconify-svelte/mdi/youtube";
@@ -55,6 +57,6 @@
 		{/snippet}
 	</Card>
 {/snippet}
-{@render Section("albums", "/", [bleachedCover, bleuCover])}
-{@render Section("events", "/", [bleachedCover, bleuCover])}
-{@render Section("merch", "/", [bleachedCover, bleuCover])}
+{@render Section("albums", "/", [bleachedCover, lbadyCover])}
+{@render Section("events", "/", [bleachedCover, lbadyCover])}
+{@render Section("merch", "/", [bleachedTShirt, lbadyTShirt])}
