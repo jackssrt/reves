@@ -2,17 +2,17 @@
 	import Card from "#lib/Card.svelte";
 	import { m } from "#lib/paraglide/messages.js";
 	import ItemStack from "./ItemStack.svelte";
-	import backgroundImg from "#lib/assets/bluebackground.jpg";
-	import bleachedCover from "#lib/assets/covers/bleached.png";
-	import lbadyCover from "#lib/assets/covers/lbady.jpg";
-	import bleachedTShirt from "#lib/assets/tshirts/bleached.png";
-	import lbadyTShirt from "#lib/assets/tshirts/lbady.png";
+	import bleachedCover from "#lib/assets/covers/bleached.png?enhanced";
+	import lbadyCover from "#lib/assets/covers/lbady.jpg?enhanced";
+	import bleachedTShirt from "#lib/assets/tshirts/bleached.png?enhanced";
+	import lbadyTShirt from "#lib/assets/tshirts/lbady.png?enhanced";
 	import ArrowRightIcon from "@iconify-svelte/lucide/arrow-right";
 	import InstagramIcon from "@iconify-svelte/mdi/instagram";
 	import YoutubeIcon from "@iconify-svelte/mdi/youtube";
 	import DiscordIcon from "@iconify-svelte/ic/baseline-discord";
 	import Button from "#lib/Button.svelte";
 	import { type Resolvable } from "#lib/utils.ts";
+	import { type Picture } from "@sveltejs/enhanced-img";
 </script>
 
 <Card title="Rêves" titleType="big" class="bg-primary">
@@ -36,7 +36,7 @@
 {#snippet Section(
 	translationKey: "events" | "albums" | "merch",
 	href: Resolvable,
-	[bottomImg, topImg]: [string, string]
+	[bottomImg, topImg]: [Picture, Picture]
 )}
 	<Card title={m[`index.${translationKey}`]()} {href} class="group bg-secondary">
 		<p>{m[`index.${translationKey}.description`]()}</p>
