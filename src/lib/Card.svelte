@@ -3,8 +3,11 @@
 	import { cn, type Resolvable, resolve } from "./utils";
 	import type { Snippet } from "svelte";
 
+	export type TitleType = "big" | "normal";
+
 	let {
 		class: _klass,
+		titleType = "normal",
 		href,
 		title,
 		left,
@@ -13,6 +16,7 @@
 		children: _children,
 	}: {
 		class: ClassValue;
+		titleType?: TitleType;
 		href?: Resolvable;
 		title?: Snippet | string;
 		left?: Snippet;
@@ -27,7 +31,7 @@
 	{@render left?.()}
 	<div class="flex grow flex-col">
 		{#if typeof title === "string"}
-			<h1 class="text-xl font-bold">{title}</h1>
+			<h1 class={cn("text-xl font-bold", { "text-2xl": titleType === "big" })}>{title}</h1>
 		{:else if typeof title !== "undefined"}
 			{@render title()}
 		{/if}

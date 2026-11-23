@@ -9,7 +9,7 @@
 </script>
 
 <Background src={backgroundImg}></Background>
-<Card title="Albums" class="bg-primary">{m["index.albums.description"]()}</Card>
+<Card title="Albums" titleType="big" class="bg-primary">{m["index.albums.description"]()}</Card>
 
 <Card title="Bleached" class="bg-secondary">
 	{m["albums.bleached.description"]()}

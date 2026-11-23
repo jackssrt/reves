@@ -18,7 +18,7 @@
 
 <Background src={backgroundImg}></Background>
 
-<Card title="Rêves" class=" bg-primary">
+<Card title="Rêves" titleType="big" class="bg-primary">
 	{#snippet left()}
 		<enhanced:img src="#lib/assets/avatar.jpg" class="h-auto w-full"></enhanced:img>
 	{/snippet}
