@@ -7,6 +7,9 @@
 	import bleachedCover from "#lib/assets/covers/bleached.png";
 	import bleuCover from "#lib/assets/covers/le-bleu-a-des-yeux.jpg";
 	import ArrowRightIcon from "@iconify-svelte/lucide/arrow-right";
+	import InstagramIcon from "@iconify-svelte/mdi/instagram";
+	import YoutubeIcon from "@iconify-svelte/mdi/youtube";
+	import DiscordIcon from "@iconify-svelte/ic/baseline-discord";
 	import { resolve } from "$app/paths";
 </script>
 
@@ -17,6 +20,17 @@
 		<enhanced:img src="#lib/assets/avatar.jpg" class="h-auto w-full"></enhanced:img>
 	{/snippet}
 	<p>{m["index.description"]()}</p>
+	{#snippet dock()}
+		<a href="https://www.instagram.com/reves.partys/">
+			<InstagramIcon class="m-2 h-8 w-8"></InstagramIcon>
+		</a>
+		<a href="https://www.youtube.com/@RevesPartys">
+			<YoutubeIcon class="m-2 h-8 w-8"></YoutubeIcon>
+		</a>
+		<a href="https://discord.gg/yhqvPfkD9U">
+			<DiscordIcon class="m-2 h-8 w-8"></DiscordIcon>
+		</a>
+	{/snippet}
 </Card>
 
 {#snippet Section(

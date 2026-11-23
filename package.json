@@ -41,7 +41,9 @@
 		"vite": "^8.3.8"
 	},
 	"dependencies": {
+		"@iconify-svelte/ic": "^1.0.3",
 		"@iconify-svelte/lucide": "^1.0.66",
+		"@iconify-svelte/mdi": "^1.0.2",
 		"clsx": "^2.1.1",
 		"tailwind-merge": "^3.7.0",
 		"type-fest": "^6.0.3"
