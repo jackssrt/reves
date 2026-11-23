@@ -57,6 +57,6 @@
 		{/snippet}
 	</Card>
 {/snippet}
-{@render Section("albums", "/", [bleachedCover, lbadyCover])}
 {@render Section("events", "/", [bleachedCover, lbadyCover])}
+{@render Section("albums", "/", [bleachedCover, lbadyCover])}
 {@render Section("merch", "/", [bleachedTShirt, lbadyTShirt])}
