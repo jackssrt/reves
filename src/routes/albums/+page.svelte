@@ -8,7 +8,7 @@
 
 <Card title="Albums" titleType="big" class="bg-primary">{m["index.albums.description"]()}</Card>
 
-<Card title="Bleached" class="bg-secondary">
+<Card title="Bleached" class="bg-secondary" date={new Date(2026, 3, 20)}>
 	{m["albums.bleached.description"]()}
 	{#snippet right()}
 		<!-- force max width -->
@@ -30,7 +30,7 @@
 	{/snippet}
 </Card>
 
-<Card title="Le bleu a des yeux" class="bg-secondary">
+<Card title="Le bleu a des yeux" class="bg-secondary" date={new Date(2023, 4, 21)}>
 	{m["albums.lbady.description"]()}
 	{#snippet right()}
 		<!-- force max width -->

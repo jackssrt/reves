@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { getLocale } from "./paraglide/runtime";
 	import { cn, type Resolvable, resolve } from "./utils";
 	import type { Snippet } from "svelte";
 
@@ -9,6 +10,7 @@
 		titleType = "normal",
 		href,
 		title,
+		date: _date,
 		left,
 		right,
 		dock,
@@ -17,6 +19,7 @@
 		class: string | { main: string; dock?: string };
 		titleType?: TitleType;
 		href?: Resolvable;
+		date?: Date;
 		title?: Snippet | string;
 		left?: Snippet;
 		right?: Snippet;
@@ -31,10 +34,21 @@
 {#snippet children()}
 	{@render left?.()}
 	<div class="flex grow flex-col">
+		{#snippet date()}
+			{#if _date}
+				<span class="block text-sm font-normal md:inline"
+					>{new Intl.DateTimeFormat(getLocale()).format(_date)}</span
+				>
+			{/if}
+		{/snippet}
 		{#if typeof title === "string"}
-			<h1 class={cn("text-xl font-bold", { "text-2xl": titleType === "big" })}>{title}</h1>
+			<h1 class={cn("text-xl font-bold", { "text-2xl": titleType === "big" })}>
+				{title}
+				{@render date()}
+			</h1>
 		{:else if typeof title !== "undefined"}
 			{@render title()}
+			{@render date()}
 		{/if}
 		{@render _children()}
 		{#if dock}
