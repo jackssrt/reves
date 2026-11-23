@@ -2,7 +2,7 @@
 	import type { Snippet } from "svelte";
 	import { cn, type Resolvable, resolve } from "./utils";
 	import type { Locale } from "./paraglide/runtime";
-	export type ButtonTypes = "suggested" | "normal" | "secondary" | "disabled";
+	export type ButtonType = "suggested" | "normal" | "secondary" | "disabled";
 
 	let {
 		class: klass,
@@ -14,7 +14,7 @@
 	}: {
 		class?: string;
 		href: Resolvable;
-		type?: ButtonTypes;
+		type?: ButtonType;
 		children: Snippet;
 		reload?: boolean;
 		locale?: Locale;
