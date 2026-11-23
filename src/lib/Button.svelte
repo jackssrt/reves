@@ -1,29 +1,39 @@
 <script lang="ts">
 	import type { Snippet } from "svelte";
 	import { cn, type Resolvable, resolve } from "./utils";
-	export type ButtonTypes = "suggested" | "normal" | "secondary";
+	import type { Locale } from "./paraglide/runtime";
+	export type ButtonTypes = "suggested" | "normal" | "secondary" | "disabled";
 
 	let {
 		class: klass,
 		href,
 		type: kind = "normal",
 		children: _children,
+		reload = false,
+		locale,
 	}: {
 		class?: string;
 		href: Resolvable;
 		type?: ButtonTypes;
 		children: Snippet;
+		reload?: boolean;
+		locale?: Locale;
 	} = $props();
 </script>
 
 {#snippet children()}
 	<a
-		href={resolve(href)}
+		href={resolve(href, locale)}
 		class={cn(
-			"grid h-8 min-w-24 place-items-center bg-white p-2 text-primary shadow-xs transition-shadow hover:shadow",
-			{ "bg-transparent": kind === "secondary" },
+			"grid h-8 min-w-24 place-items-center bg-white px-2 text-primary shadow-xs transition-shadow hover:shadow",
+			{
+				"bg-transparent": kind === "secondary",
+				"pointer-events-none border border-dotted bg-transparent text-white": kind === "disabled",
+			},
 			klass
 		)}
+		aria-disabled={kind !== "disabled"}
+		data-sveltekit-reload={reload}
 	>
 		{@render _children()}
 	</a>

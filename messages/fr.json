@@ -1,5 +1,6 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"locale": "Français",
 	"index.description": "Nous sommes une organisation qui fait des concerts pour les artistes inconnu-e-s.",
 	"index.albums": "Albums",
 	"index.albums.description": "Voici nos albums",

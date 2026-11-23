@@ -1,12 +1,9 @@
 <script lang="ts">
-	import type { Path } from "$app/types";
-	import { resolve } from "$app/paths";
-	import { page } from "$app/state";
-	import { locales, localizeHref } from "#lib/paraglide/runtime.js";
 	import "./layout.css";
 	import favicon from "#lib/assets/avatar.jpg";
 	import type { LayoutProps } from "./$types";
 	import Footer from "./Footer.svelte";
+	import LanguageSwitcher from "./LanguageSwitcher.svelte";
 
 	let { children }: LayoutProps = $props();
 </script>
@@ -26,11 +23,6 @@
 	<div class="flex w-full flex-col gap-1 p-2 xl:w-4xl">
 		{@render children()}
 		<Footer></Footer>
+		<LanguageSwitcher></LanguageSwitcher>
 	</div>
-</div>
-
-<div style="display:none">
-	{#each locales as locale (locale)}
-		<a href={resolve(localizeHref(page.url.pathname, { locale }) as Path)}>{locale}</a>
-	{/each}
 </div>

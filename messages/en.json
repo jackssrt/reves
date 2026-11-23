@@ -1,5 +1,13 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"locale": "English",
+	"index.description": "Nous sommes une organisation qui fait des concerts pour les artistes inconnu-e-s.",
 	"index.albums": "Albums",
-	"index.description": "We are a "
+	"index.albums.description": "Voici nos albums",
+	"index.events": "Events",
+	"index.events.description": "Une liste de nos évènements, futur, present et passés.",
+	"index.merch": "Merch",
+	"index.merch.description": "Achète-toi un t-shirt cool !",
+	"albums.bleached.description": "Achète-toi un t-shirt cool !",
+	"albums.lbady.description": "Achète-toi un t-shirt cool !"
 }
