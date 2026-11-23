@@ -13,6 +13,7 @@
 	import YoutubeIcon from "@iconify-svelte/mdi/youtube";
 	import DiscordIcon from "@iconify-svelte/ic/baseline-discord";
 	import { resolve } from "$app/paths";
+	import Button from "#lib/Button.svelte";
 </script>
 
 <Background src={backgroundImg}></Background>
@@ -23,15 +24,15 @@
 	{/snippet}
 	<p>{m["index.description"]()}</p>
 	{#snippet dock()}
-		<a href="https://www.instagram.com/reves.partys/">
+		<Button href="https://www.instagram.com/reves.partys/" class="min-w-8">
 			<InstagramIcon class="m-2 h-8 w-8"></InstagramIcon>
-		</a>
-		<a href="https://www.youtube.com/@RevesPartys">
+		</Button>
+		<Button href="https://www.youtube.com/@RevesPartys" class="min-w-8">
 			<YoutubeIcon class="m-2 h-8 w-8"></YoutubeIcon>
-		</a>
-		<a href="https://discord.gg/yhqvPfkD9U">
+		</Button>
+		<Button href="https://discord.gg/yhqvPfkD9U" class="min-w-8">
 			<DiscordIcon class="m-2 h-8 w-8"></DiscordIcon>
-		</a>
+		</Button>
 	{/snippet}
 </Card>
 
