@@ -23,7 +23,7 @@
 	sizes=""
 ></enhanced:img>
 <div class="grid min-h-dvh place-items-center text-text">
-	<div class="flex min-w-full flex-col gap-1 p-2 md:min-w-2xl">
+	<div class="flex w-full flex-col gap-1 p-2 xl:w-4xl">
 		{@render children()}
 		<Footer></Footer>
 	</div>
