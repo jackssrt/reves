@@ -16,6 +16,7 @@ export default defineConfig({
 					filename.split(/[/\\]/).includes("node_modules") ? undefined : true,
 			},
 			adapter: adapter(),
+			inspector: true,
 		}),
 
 		paraglideVitePlugin({
