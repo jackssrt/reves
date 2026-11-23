@@ -40,7 +40,7 @@
 {/snippet}
 
 {#if kind === "suggested"}
-	<div class="border-white p-0.5">
+	<div class="border p-0.5">
 		{@render children()}
 	</div>
 {:else}
