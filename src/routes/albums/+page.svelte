@@ -10,7 +10,7 @@
 <Card title="Albums" titleType="big" class="bg-primary">{m["index.albums.description"]()}</Card>
 
 <div class="flex flex-col gap-0.5">
-	<Card title="Bleached" class="bg-secondary" date={new Date(2026, 3, 20)}>
+	<Card title="Bleached" class="bg-secondary" date={new Date(2026, 3 - 1, 20)}>
 		{m["albums.bleached.description"]()}
 		{#snippet right()}
 			<!-- force max width -->
@@ -55,7 +55,7 @@
 </div>
 
 <div class="flex flex-col gap-0.5">
-	<Card title="Le bleu a des yeux" class="bg-secondary" date={new Date(2023, 4, 21)}>
+	<Card title="Le bleu a des yeux" class="bg-secondary" date={new Date(2023, 4 - 1, 21)}>
 		{m["albums.lbady.description"]()}
 		{#snippet right()}
 			<!-- force max width -->
