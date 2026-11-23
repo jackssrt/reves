@@ -28,7 +28,7 @@
 	{@render left?.()}
 	<div class="flex grow flex-col">
 		{#if title}
-			<h1>{title}</h1>
+			<h1 class="text-xl font-bold">{title}</h1>
 		{/if}
 		{@render _children()}
 		<div class="mt-auto flex">
