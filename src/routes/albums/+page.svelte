@@ -21,7 +21,7 @@
 		<Button
 			class="flex justify-center gap-2"
 			href="https://open.spotify.com/intl-fr/album/3fm5uEHogwcjhaWsR4RboN"
-			><SpotifyIcon class="-m-1 h-8 w-8"></SpotifyIcon>Spotify</Button
+			><SpotifyIcon class="-m-1 h-7 w-7"></SpotifyIcon>Spotify</Button
 		>
 		<Button
 			class="flex justify-center gap-2"
@@ -41,7 +41,7 @@
 		<Button
 			class="flex justify-center gap-2"
 			href="https://open.spotify.com/album/0oTghbuoMeHAdBLcUaDHvc"
-			><SpotifyIcon class="-m-1 h-8 w-8"></SpotifyIcon>Spotify</Button
+			><SpotifyIcon class="-m-1 h-7 w-7"></SpotifyIcon>Spotify</Button
 		>
 		<Button
 			class="flex justify-center gap-2"
