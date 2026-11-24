@@ -2,6 +2,8 @@
 	import Card from "#lib/Card.svelte";
 	import { m } from "#lib/paraglide/messages.js";
 	import ItemStack from "./ItemStack.svelte";
+	import reves15Img from "#lib/assets/events/reves15.jpg?enhanced";
+	import tour2026part2Img from "#lib/assets/events/2026tour2.jpg?enhanced";
 	import bleachedCover from "#lib/assets/covers/bleached.png?enhanced";
 	import lbadyCover from "#lib/assets/covers/lbady.jpg?enhanced";
 	import bleachedTShirt from "#lib/assets/tshirts/bleached.png?enhanced";
@@ -46,15 +48,19 @@
 		{#snippet right()}
 			<ItemStack class="shrink-0">
 				{#snippet top()}
-					<enhanced:img src={bottomImg} class="h-full w-full"></enhanced:img>
+					<div class="h-full w-full">
+						<enhanced:img src={bottomImg} class="h-full w-full"></enhanced:img>
+					</div>
 				{/snippet}
 				{#snippet bottom()}
-					<enhanced:img src={topImg} class="h-full w-full"></enhanced:img>
+					<div class="h-full w-full">
+						<enhanced:img src={topImg} class="h-full w-full"></enhanced:img>
+					</div>
 				{/snippet}
 			</ItemStack>
 		{/snippet}
 	</Card>
 {/snippet}
-{@render Section("events", "/events", [bleachedCover, lbadyCover])}
+{@render Section("events", "/events", [tour2026part2Img, reves15Img])}
 {@render Section("albums", "/albums", [bleachedCover, lbadyCover])}
 {@render Section("merch", "https://revesparty.bigcartel.com/", [bleachedTShirt, lbadyTShirt])}
