@@ -63,4 +63,4 @@
 {/snippet}
 {@render Section("events", "/events", [tour2026part2Img, reves15Img])}
 {@render Section("albums", "/albums", [bleachedCover, lbadyCover])}
-{@render Section("merch", "https://revesparty.bigcartel.com/", [bleachedTShirt, lbadyTShirt])}
+{@render Section("merch", "https://revesparty.bigcartel.com/", [lbadyTShirt, bleachedTShirt])}
