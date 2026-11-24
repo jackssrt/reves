@@ -38,10 +38,13 @@
 	["events.announcement", "https://www.instagram.com/reves.partys/p/Dc_dovVIazq/", "normal"],
 ])}
 {@render EventCard("2026tour", new Date(2026, 4 - 1, 24), tourImg, [
-	["events.announcement", "https://www.instagram.com/reves.partys/p/DVq89Q4iObt/", "normal"],
+	["events.aftermovie.france", "https://www.youtube.com/watch?v=BmgOQeXqUPU", "normal"],
+	["events.aftermovie.japan", "https://www.youtube.com/watch?v=SXpC7atHr9c", "normal"],
+	["events.announcement", "https://www.instagram.com/reves.partys/p/DVq89Q4iObt/", "secondary"],
 ])}
 {@render EventCard("reves15", new Date(2025, 11 - 1, 28), reves15Img, [
 	["events.aftermovie", "https://www.youtube.com/watch?v=5Oladw__Dn4", "normal"],
+	["events.announcement", "https://www.instagram.com/reves.partys/p/DVq89Q4iObt/", "secondary"],
 ])}
 {@render EventCard("reves14part2", new Date(2025, 9 - 1, 7), reves14Part2Img, [
 	["events.aftermovie", "https://www.youtube.com/watch?v=k2QsbQb1mmw", "normal"],
