@@ -27,7 +27,7 @@
 		class={cn(
 			"grid h-8 min-w-24 place-items-center bg-white px-2 text-primary shadow-xs transition-shadow hover:shadow",
 			{
-				"bg-transparent": kind === "secondary",
+				"border border-white bg-transparent text-white": kind === "secondary",
 				"pointer-events-none border border-dotted bg-transparent text-white": kind === "disabled",
 			},
 			klass
