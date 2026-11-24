@@ -29,7 +29,7 @@
 
 <Card title="Rêves" titleType="big" class={{ main: "bg-primary", dock: "flex-row" }}>
 	{#snippet left()}
-		<enhanced:img src="#lib/assets/avatar.jpg" class="h-auto w-full"></enhanced:img>
+		<enhanced:img src="#lib/assets/avatar.jpg" class="h-auto w-full" alt="avatar"></enhanced:img>
 	{/snippet}
 	<p>{m["index.description"]()}</p>
 	{#snippet dock()}
@@ -71,12 +71,20 @@
 			<ItemStack class="shrink-0">
 				{#snippet top()}
 					<div class="grid h-full w-full place-items-center">
-						<enhanced:img src={bottomImg} class="h-full w-auto object-center"></enhanced:img>
+						<enhanced:img
+							src={bottomImg}
+							class="h-full w-auto object-center"
+							alt={m["index.image_of"]({ what: m[`index.${translationKey}`]() })}
+						></enhanced:img>
 					</div>
 				{/snippet}
 				{#snippet bottom()}
 					<div class="h-full w-full">
-						<enhanced:img src={topImg} class="h-full w-auto object-center"></enhanced:img>
+						<enhanced:img
+							src={topImg}
+							class="h-full w-auto object-center"
+							alt={m["index.image_of"]({ what: m[`index.${translationKey}`]() })}
+						></enhanced:img>
 					</div>
 				{/snippet}
 			</ItemStack>

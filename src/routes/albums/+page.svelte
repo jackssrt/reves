@@ -31,9 +31,16 @@
 		{m["albums.bleached.description"]()}
 		{#snippet right()}
 			<!-- force max width -->
-			<enhanced:img src="#lib/assets/typos/bleached-typo.png?w=9999" class="hidden md:block"
+			<enhanced:img
+				src="#lib/assets/typos/bleached-typo.png?w=9999"
+				class="hidden md:block"
+				alt="Bleached"
 			></enhanced:img>
-			<enhanced:img src="#lib/assets/covers/bleached.png" class="h-auto max-w-48"></enhanced:img>
+			<enhanced:img
+				src="#lib/assets/covers/bleached.png"
+				class="h-auto max-w-48"
+				alt={m["albums.cover"]()}
+			></enhanced:img>
 		{/snippet}
 		{#snippet dock()}
 			<Button
@@ -76,9 +83,16 @@
 		{m["albums.lbady.description"]()}
 		{#snippet right()}
 			<!-- force max width -->
-			<enhanced:img class="hidden md:block" src="#lib/assets/typos/lbady-typo.png?w=9999"
+			<enhanced:img
+				class="hidden md:block"
+				src="#lib/assets/typos/lbady-typo.png?w=9999"
+				alt="Le bleu a des yeux"
 			></enhanced:img>
-			<enhanced:img src="#lib/assets/covers/lbady.jpg" class="h-auto max-w-48"></enhanced:img>
+			<enhanced:img
+				src="#lib/assets/covers/lbady.jpg"
+				class="h-auto max-w-48"
+				alt={m["albums.cover"]()}
+			></enhanced:img>
 		{/snippet}
 		{#snippet dock()}
 			<Button
