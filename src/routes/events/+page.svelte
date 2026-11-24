@@ -35,17 +35,17 @@
 {/snippet}
 
 {@render EventCard("2026tour2", new Date(2026, 9 - 1, 27), tour2Img, [
-	["events.announcement", "https://www.instagram.com/reves.partys/p/Dc_dovVIazq/", "suggested"],
+	["events.announcement", "https://www.instagram.com/reves.partys/p/Dc_dovVIazq/", "normal"],
 ])}
 {@render EventCard("2026tour", new Date(2026, 4 - 1, 24), tourImg, [
-	["events.announcement", "https://www.instagram.com/reves.partys/p/DVq89Q4iObt/", "suggested"],
+	["events.announcement", "https://www.instagram.com/reves.partys/p/DVq89Q4iObt/", "normal"],
 ])}
-{@render EventCard("reves15", new Date(2025, 9 - 1, 27), reves15Img, [
-	["events.aftermovie", "", "suggested"],
+{@render EventCard("reves15", new Date(2025, 11 - 1, 28), reves15Img, [
+	["events.aftermovie", "https://www.youtube.com/watch?v=5Oladw__Dn4", "normal"],
 ])}
 {@render EventCard("reves14part2", new Date(2025, 9 - 1, 7), reves14Part2Img, [
-	["events.aftermovie", "", "suggested"],
+	["events.aftermovie", "https://www.youtube.com/watch?v=k2QsbQb1mmw", "normal"],
 ])}
 {@render EventCard("reves14", new Date(2025, 9 - 1, 6), reves14Img, [
-	["events.aftermovie", "", "suggested"],
+	["events.aftermovie", "https://www.youtube.com/watch?v=k2QsbQb1mmw", "normal"],
 ])}
