@@ -39,7 +39,7 @@
 	[bottomImg, topImg]: [Picture, Picture]
 )}
 	<Card title={m[`index.${translationKey}`]()} {href} class="group bg-secondary">
-		<p>{m[`index.${translationKey}.description`]()}</p>
+		<pre class="font-sans text-wrap">{m[`index.${translationKey}.description`]()}</pre>
 		{#snippet dock()}
 			<ArrowRightIcon class="-m-2 h-8 w-8 overflow-clip"></ArrowRightIcon>
 		{/snippet}
