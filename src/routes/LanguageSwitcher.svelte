@@ -10,7 +10,7 @@
 	const currentLocale = getLocale();
 </script>
 
-<Card class="ml-auto w-fit bg-secondary xl:absolute xl:top-0 xl:right-0 xl:bg-primary">
+<Card class="ml-auto w-fit bg-secondary xl:fixed xl:top-0 xl:right-0 xl:bg-primary">
 	{#snippet left()}
 		<GlobeIcon class="w-7"></GlobeIcon>
 	{/snippet}
