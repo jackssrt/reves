@@ -13,6 +13,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<meta name="theme-color" content="#1700ff" />
 	{#if deLocalizeHref(page.url.pathname) !== "/"}
 		<title
 			>{m[`meta.${deLocalizeHref(page.url.pathname)}.title` as keyof typeof m]()} - {m[
