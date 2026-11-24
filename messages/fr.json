@@ -1,6 +1,7 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"locale": "Français",
+	"go_back": "Revenir en arrière",
 	"meta./.title": "Rêves",
 	"meta./events.title": "Évènements",
 	"meta./albums.title": "Albums",

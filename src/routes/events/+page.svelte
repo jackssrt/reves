@@ -9,10 +9,14 @@
 	import reves15Img from "#lib/assets/events/reves15.jpg?enhanced";
 	import reves14Part2Img from "#lib/assets/events/reves14part2.jpg?enhanced";
 	import reves14Img from "#lib/assets/events/reves14.jpg?enhanced";
+	import BackButton from "#lib/BackButton.svelte";
 </script>
 
 <Card title={m["index.events"]()} titleType="big" class="bg-primary">
 	{m["index.events.description"]()}
+	{#snippet dock()}
+		<BackButton></BackButton>
+	{/snippet}
 </Card>
 {#snippet EventCard(
 	name: "2026tour" | "2026tour2" | "reves15" | "reves14" | "reves14part2",

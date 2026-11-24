@@ -5,9 +5,16 @@
 	import SpotifyIcon from "@iconify-svelte/mdi/spotify";
 	import AppleMusicIcon from "@iconify-svelte/cib/apple-music";
 	import Tracklist from "./Tracklist.svelte";
+	import BackButton from "#lib/BackButton.svelte";
 </script>
 
-<Card title="Albums" titleType="big" class="bg-primary">{m["index.albums.description"]()}</Card>
+<Card title="Albums" titleType="big" class="bg-primary">
+	{m["index.albums.description"]()}
+
+	{#snippet dock()}
+		<BackButton></BackButton>
+	{/snippet}
+</Card>
 
 <div class="flex flex-col gap-0.5">
 	<Card title="Bleached" class="bg-secondary" date={new Date(2026, 3 - 1, 20)}>
