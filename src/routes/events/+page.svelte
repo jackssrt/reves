@@ -5,12 +5,22 @@
 	import { type Resolvable } from "#lib/utils.ts";
 	import { type Picture } from "@sveltejs/enhanced-img";
 	import tour2Img from "#lib/assets/events/2026tour2.jpg?enhanced";
+	import tour2ImgUrl from "#lib/assets/events/2026tour2.jpg";
 	import tourImg from "#lib/assets/events/2026tour.jpg?enhanced";
 	import reves15Img from "#lib/assets/events/reves15.jpg?enhanced";
 	import reves14Part2Img from "#lib/assets/events/reves14part2.jpg?enhanced";
 	import reves14Img from "#lib/assets/events/reves14.jpg?enhanced";
 	import BackButton from "#lib/BackButton.svelte";
 </script>
+
+<svelte:head>
+	<meta name="og:title" content={`${m["meta./events.title"]} - ${m["meta./.title"]()}`} />
+	<meta name="description" content={m["index.albums.description"]()} />
+	<meta name="og:description" content={m["index.albums.description"]()} />
+	<meta name="og:image" content={tour2ImgUrl} />
+	<meta name="keywords" content={m["meta.tags"]()} />
+	<meta name="og:type" content="website" />
+</svelte:head>
 
 <Card title={m["index.events"]()} titleType="big" class="bg-primary">
 	{m["index.events.description"]()}

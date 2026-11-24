@@ -8,6 +8,7 @@
 	import lbadyCover from "#lib/assets/covers/lbady.jpg?enhanced";
 	import bleachedTShirt from "#lib/assets/tshirts/bleached.png?enhanced";
 	import lbadyTShirt from "#lib/assets/tshirts/lbady.png?enhanced";
+	import avatar from "#lib/assets/avatar.jpg";
 	import ArrowRightIcon from "@iconify-svelte/lucide/arrow-right";
 	import InstagramIcon from "@iconify-svelte/mdi/instagram";
 	import YoutubeIcon from "@iconify-svelte/mdi/youtube";
@@ -16,6 +17,15 @@
 	import { type Resolvable } from "#lib/utils.ts";
 	import { type Picture } from "@sveltejs/enhanced-img";
 </script>
+
+<svelte:head>
+	<meta name="og:title" content={m["meta./.title"]()} />
+	<meta name="description" content={m["index.description"]()} />
+	<meta name="og:description" content={m["index.description"]()} />
+	<meta name="og:image" content={avatar} />
+	<meta name="keywords" content={m["meta.tags"]()} />
+	<meta name="og:type" content="website" />
+</svelte:head>
 
 <Card title="Rêves" titleType="big" class={{ main: "bg-primary", dock: "flex-row" }}>
 	{#snippet left()}

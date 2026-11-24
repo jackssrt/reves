@@ -6,7 +6,17 @@
 	import AppleMusicIcon from "@iconify-svelte/cib/apple-music";
 	import Tracklist from "./Tracklist.svelte";
 	import BackButton from "#lib/BackButton.svelte";
+	import bleachedCover from "#lib/assets/covers/bleached.png";
 </script>
+
+<svelte:head>
+	<meta name="og:title" content={`${m["meta./albums.title"]} - ${m["meta./.title"]()}`} />
+	<meta name="description" content={m["index.albums.description"]()} />
+	<meta name="og:description" content={m["index.albums.description"]()} />
+	<meta name="og:image" content={bleachedCover} />
+	<meta name="keywords" content={m["meta.tags"]()} />
+	<meta name="og:type" content="website" />
+</svelte:head>
 
 <Card title="Albums" titleType="big" class="bg-primary">
 	{m["index.albums.description"]()}
