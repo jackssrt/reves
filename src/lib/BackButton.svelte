@@ -4,7 +4,7 @@
 	import ArrowIcon from "@iconify-svelte/lucide/arrow-left";
 </script>
 
-<Button href="/" class="flex gap-1">
+<Button href="/" class="mt-4 flex gap-1">
 	<ArrowIcon class="w-8"></ArrowIcon>
 	{m["go_back"]()}
 </Button>
