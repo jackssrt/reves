@@ -48,7 +48,9 @@
 ])}
 {@render EventCard("reves14part2", new Date(2025, 9 - 1, 7), reves14Part2Img, [
 	["events.aftermovie", "https://www.youtube.com/watch?v=k2QsbQb1mmw", "normal"],
+	["events.announcement", "https://www.instagram.com/reves.partys/p/DN55l_0iDrz/", "secondary"],
 ])}
 {@render EventCard("reves14", new Date(2025, 9 - 1, 6), reves14Img, [
 	["events.aftermovie", "https://www.youtube.com/watch?v=k2QsbQb1mmw", "normal"],
+	["events.announcement", "https://www.instagram.com/reves.partys/p/DNgJWcHsmx7/", "secondary"],
 ])}
