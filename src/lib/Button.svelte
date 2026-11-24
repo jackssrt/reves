@@ -32,7 +32,7 @@
 			},
 			klass
 		)}
-		aria-disabled={kind !== "disabled"}
+		aria-disabled={kind === "disabled"}
 		data-sveltekit-reload={reload}
 	>
 		{@render _children()}
