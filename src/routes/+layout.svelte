@@ -4,12 +4,20 @@
 	import type { LayoutProps } from "./$types";
 	import Footer from "./Footer.svelte";
 	import LanguageSwitcher from "./LanguageSwitcher.svelte";
+	import { m } from "#lib/paraglide/messages.js";
+	import { page } from "$app/state";
 
 	let { children }: LayoutProps = $props();
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	{#if page.url.pathname !== "/"}
+		<title>{m[`meta.${page.url.pathname}.title` as keyof typeof m]()} - {m["meta./.title"]()}</title
+		>
+	{:else}
+		<title>{m[`meta.${page.url.pathname}.title` as keyof typeof m]()}</title>
+	{/if}
 </svelte:head>
 
 <enhanced:img
