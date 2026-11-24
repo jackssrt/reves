@@ -12,12 +12,12 @@
 
 <div class={cn("relative h-26 w-34", klass)}>
 	<div
-		class="absolute h-20 translate-x-1 translate-y-4 -rotate-10 drop-shadow transition group-hover:translate-x-0 group-hover:translate-y-3 group-hover:drop-shadow-lg"
+		class="absolute h-20 w-20 translate-x-1 translate-y-4 -rotate-10 drop-shadow transition group-hover:translate-x-0 group-hover:translate-y-3 group-hover:drop-shadow-lg"
 	>
 		{@render bottom()}
 	</div>
 	<div
-		class="absolute h-20 translate-x-13 translate-y-1 rotate-5 drop-shadow-lg transition group-hover:translate-x-14 group-hover:translate-y-0 group-hover:drop-shadow-xl"
+		class="absolute h-20 w-20 translate-x-13 translate-y-1 rotate-5 drop-shadow-lg transition group-hover:translate-x-14 group-hover:translate-y-0 group-hover:drop-shadow-xl"
 	>
 		{@render top()}
 	</div>

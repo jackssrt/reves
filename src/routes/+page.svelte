@@ -48,13 +48,13 @@
 		{#snippet right()}
 			<ItemStack class="shrink-0">
 				{#snippet top()}
-					<div class="h-full w-full">
-						<enhanced:img src={bottomImg} class="h-full w-full"></enhanced:img>
+					<div class="grid h-full w-full place-items-center">
+						<enhanced:img src={bottomImg} class="h-full w-auto object-center"></enhanced:img>
 					</div>
 				{/snippet}
 				{#snippet bottom()}
 					<div class="h-full w-full">
-						<enhanced:img src={topImg} class="h-full w-full"></enhanced:img>
+						<enhanced:img src={topImg} class="h-full w-auto object-center"></enhanced:img>
 					</div>
 				{/snippet}
 			</ItemStack>
