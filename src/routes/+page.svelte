@@ -33,13 +33,25 @@
 	{/snippet}
 	<p>{m["index.description"]()}</p>
 	{#snippet dock()}
-		<Button href="https://www.instagram.com/reves.partys/" class="h-12 w-12 min-w-[initial] p-0">
+		<Button
+			href="https://www.instagram.com/reves.partys/"
+			class="h-12 w-12 min-w-[initial] p-0"
+			label="Instagram"
+		>
 			<InstagramIcon class="h-8 w-8"></InstagramIcon>
 		</Button>
-		<Button href="https://www.youtube.com/@RevesPartys" class="h-12 w-12 min-w-[initial] p-0">
+		<Button
+			href="https://www.youtube.com/@RevesPartys"
+			class="h-12 w-12 min-w-[initial] p-0"
+			label="YouTube"
+		>
 			<YoutubeIcon class="h-8 w-8"></YoutubeIcon>
 		</Button>
-		<Button href="https://discord.gg/yhqvPfkD9U" class="h-12 w-12 min-w-[initial] p-0">
+		<Button
+			href="https://discord.gg/yhqvPfkD9U"
+			class="h-12 w-12 min-w-[initial] p-0"
+			label="Discord"
+		>
 			<DiscordIcon class="h-8 w-8"></DiscordIcon>
 		</Button>
 	{/snippet}

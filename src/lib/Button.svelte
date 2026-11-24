@@ -11,6 +11,7 @@
 		children: _children,
 		reload = false,
 		locale,
+		label,
 	}: {
 		class?: string;
 		href: Resolvable;
@@ -18,6 +19,7 @@
 		children: Snippet;
 		reload?: boolean;
 		locale?: Locale;
+		label?: string;
 	} = $props();
 </script>
 
@@ -34,6 +36,8 @@
 		)}
 		aria-disabled={kind === "disabled"}
 		data-sveltekit-reload={reload}
+		aria-label={label}
+		title={label}
 	>
 		{@render _children()}
 	</a>
