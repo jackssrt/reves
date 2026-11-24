@@ -29,7 +29,12 @@
 
 <Card title="Rêves" titleType="big" class={{ main: "bg-primary", dock: "flex-row" }}>
 	{#snippet left()}
-		<enhanced:img src="#lib/assets/avatar.jpg" class="h-auto w-full" alt="avatar"></enhanced:img>
+		<enhanced:img
+			src="#lib/assets/avatar.jpg"
+			class="h-auto w-full"
+			alt="avatar"
+			fetchpriority="high"
+		></enhanced:img>
 	{/snippet}
 	<p>{m["index.description"]()}</p>
 	{#snippet dock()}
