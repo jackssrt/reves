@@ -28,5 +28,9 @@
 	"events.aftermovie": "Aftermovie",
 	"events.aftermovie.france": "Aftermovie (France)",
 	"events.aftermovie.japan": "Aftermovie (Japan)",
-	"events.imageAltText": "Event poster"
+	"events.imageAltText": "Event poster",
+	"footer.made_with": "Made with love by ",
+	"footer.jackssrt": "jackssrt",
+	"footer.for": " for ",
+	"footer.reves": "Rêves"
 }

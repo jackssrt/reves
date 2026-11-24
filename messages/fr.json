@@ -28,5 +28,9 @@
 	"events.aftermovie": "Aftermovie",
 	"events.aftermovie.france": "Aftermovie (France)",
 	"events.aftermovie.japan": "Aftermovie (Japon)",
-	"events.imageAltText": "Affiche du évènement"
+	"events.imageAltText": "Affiche du évènement",
+	"footer.made_with": "Conçu avec de l'amour par ",
+	"footer.jackssrt": "jackssrt",
+	"footer.for": " pour ",
+	"footer.reves": "Rêves"
 }
